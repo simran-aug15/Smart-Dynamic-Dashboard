@@ -18,7 +18,7 @@ if file:
     st.dataframe(df)
 
     #Data info
-    st.sunheader("Data info")
+    st.subheader("Data info")
     st.write(df.info())
 
     # Detect numeric columns
