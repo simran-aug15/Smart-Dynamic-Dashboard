@@ -25,7 +25,7 @@ if file:
 
     chart_type = st.sidebar.selectbox(
         "Select Chart Type",
-        ["Bar Chart", "Line Chart", "Pie Chart", "Histogram","KDE Plot","Scatter Plot","Box Plot","Pair Plot"]
+        ["Bar Chart", "Line Chart", "Pie Chart", "Histogram","KDE Plot","Scatter Plot","Box Plot"]
     )
 
     # Select X-axis
