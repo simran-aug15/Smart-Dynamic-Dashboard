@@ -83,7 +83,7 @@ if file:
         
         elif chart_type == "Scatter Plot":
         #For Scatter plot 
-         st.sidebar.subheader("Select these For Scatter plot")
+         st.sidebar.subheader("Select these For Scatter plot👇")
          x_numeric = st.sidebar.selectbox(
         "Select X-axis (Numeric)",
          numeric_cols
