@@ -17,6 +17,10 @@ if file:
     st.subheader("📁 Data Preview")
     st.dataframe(df)
 
+    #Data info
+    st.sunheader("Data info")
+    st.write(df.info())
+
     # Detect numeric columns
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
 
