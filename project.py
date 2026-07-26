@@ -31,6 +31,9 @@ if file:
     # Select X-axis
     x_col = st.sidebar.selectbox("Select X-axis", df.columns)
 
+    #For Scatter plot 
+    st.subheader("Choose this For Scatter plot")
+
     if numeric_cols:
 
         # Select Y-axis
@@ -80,7 +83,7 @@ if file:
         #Scatter plot
         
         elif chart_type == "Scatter Plot":
-         st.subheader("Choose this For Scatter plot")
+
          x_numeric = st.sidebar.selectbox(
         "Select X-axis (Numeric)",
          numeric_cols
