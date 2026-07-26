@@ -104,6 +104,12 @@ if file:
          )
          st.pyplot(fig)
 
+        #Box plot
+        elif chart_type == "Box Plot":
+          fig, ax = plt.subplots(figsize=(7,5))
+          sns.boxplot(data=df,y=y_col,ax=ax)
+          st.pyplot(fig)
+
 
 
 
