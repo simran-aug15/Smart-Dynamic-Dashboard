@@ -9,7 +9,7 @@ st.title("Smart Dashboard Data Analytics")
 #Upload file
 file =st.file_uploader("Upload CSV file")
 if file:
-    df=pd.read_csv(file)
+    df = pd.read_csv(file)
 
 #Data preview
 st.subheader("📁Data Preview")  
