@@ -11,4 +11,5 @@ file =st.file_uploder("Upload CSV file")
 if file:
     df=pd.read_csv(file)
 
-#Data preview    
+#Data preview
+    
