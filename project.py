@@ -12,4 +12,5 @@ if file:
     df=pd.read_csv(file)
 
 #Data preview
-    
+st.subheader("📁Data Preview")  
+  
