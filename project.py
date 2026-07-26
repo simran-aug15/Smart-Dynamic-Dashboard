@@ -25,7 +25,7 @@ if file:
 
     chart_type = st.sidebar.selectbox(
         "Select Chart Type",
-        ["Bar Chart", "Line Chart", "Pie Chart", "Histogram","KDE Plot","Scatter Plot","Box Plot"]
+        ["Bar Chart", "Line Chart", "Pie Chart", "Histogram","KDE Plot","Scatter Plot","Box Plot","Violin Plot"]
     )
 
     # Select X-axis
@@ -110,7 +110,12 @@ if file:
           sns.boxplot(data=df,y=y_col,ax=ax)
           st.pyplot(fig)
 
-
+        #Violin Plot
+        elif chart_type=="Violin Plot":
+            fig,ax=plt.subplots(figsize=(7,5))
+            sns.violinplot(data=df,y=y_col,ax=ax)
+            ax.set_title(f"Violin Plot of {y_col}")
+            st.pyplot(fig)
 
 
 
