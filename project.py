@@ -116,7 +116,7 @@ if file:
          if categorical_cols:
            x_cat = st.sidebar.selectbox("Select Category",categorical_cols )
            fig,ax=plt.subplots(figsize=(7,5))
-           sns.violinplot(data=df,y=y_col,ax=ax)
+           sns.violinplot(data=df,x=x_cat,y=y_col,ax=ax)
            ax.set_title(f"Violin Plot of {y_col}")
            st.pyplot(fig)
 
