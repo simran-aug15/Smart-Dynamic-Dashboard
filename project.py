@@ -34,4 +34,4 @@ if numeric_cols:
 
     # Bar Chart
     if chart_type=="Bar Chart":
-        st.bar_chart(df[[x_col,y_col]])
+        st.bar_chart(df[[x_col,y_col]].set_index(x_col))  #As in dataframe we automatically get the index values of the data and take it as the x-axis but we donot need it as x-axis so we make index as x selected value by user 
