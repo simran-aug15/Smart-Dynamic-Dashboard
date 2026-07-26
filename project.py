@@ -113,7 +113,7 @@ if file:
         #Violin Plot
         elif chart_type=="Violin Plot":
          categorical_cols = df.select_dtypes(include="object").columns.tolist()
-         if categorical_cols:
+         if len(categorical_cols)>0:
            x_cat = st.sidebar.selectbox("Select Category",categorical_cols )
            fig,ax=plt.subplots(figsize=(7,5))
            sns.violinplot(data=df,x=x_cat,y=y_col,ax=ax)
