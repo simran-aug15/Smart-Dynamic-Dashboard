@@ -43,4 +43,14 @@ if numeric_cols:
 
     #Pie chart
     elif chart_type=="Pie Chart":
-        pie_chart=df.groupby(x_col)[y_col].sum()       
+        pie_data=df.groupby(x_col)[y_col].sum()
+
+        fig,ax=plt.subplots(figsize=(5,5))
+        ax.pie(
+            pie_data,
+            labels=pie_data.index,
+            autopct="%1.1f%%",
+            startangle=90,
+            pctdistance=0.8
+
+        )       
