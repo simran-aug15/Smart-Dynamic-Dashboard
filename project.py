@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 st.title("Smart Dashboard Data Analytics")
 
 #Upload file
-file =st.file_uploder("Upload CSV file")
+file =st.file_Uploder("Upload CSV file")
 if file:
     df=pd.read_csv(file)
 
