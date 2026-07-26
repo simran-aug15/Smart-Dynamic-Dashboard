@@ -41,4 +41,6 @@ if numeric_cols:
     elif chart_type=="Line Chart":
         st.line_chart(df[[x_col,y_col]].set_index(x_col))
 
-            
+    #Pie chart
+    elif chart_type=="Pie Chart":
+        pie_chart=df.groupby(x_col)[y_col].sum()       
