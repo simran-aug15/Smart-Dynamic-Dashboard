@@ -49,7 +49,7 @@ if file:
         elif chart_type == "Pie Chart":
             pie_data = df.groupby(x_col)[y_col].sum()
 
-            fig, ax = plt.subplots(figsize=(2,2))
+            fig, ax = plt.subplots(figsize=(3,3))
             ax.pie(
                 pie_data,
                 labels=pie_data.index,
