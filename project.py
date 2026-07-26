@@ -63,7 +63,26 @@ if file:
             st.pyplot(fig)
 
         #Histogram
-        #     
+        elif chart_type=="Histogram":
+              fig, ax = plt.subplots(figsize=(7,5))
+              sns.histplot(df[y_col], bins=20, kde=False)
+              plt.set_title(f"Histogram of {y_col}")
+              st.pyplot(fig)
+              
+        #KDE plot
+        elif chart_type=="KDE Plot":
+            fig,ax=plt.sublots(figsize=(3,3))
+            sns.kdeplot(data=df[y_col],)
+            sns.kdeplot(df[y_col], fill=True)
+            plt.set_title(f"KDE Plot of {y_col}")
+            st.pyplot(fig)
+
+
+
+
+
+
+
 
         # Statistics
         st.subheader("📈 Statistics")
