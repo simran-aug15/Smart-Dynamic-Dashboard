@@ -37,8 +37,6 @@ if file:
         # Select Y-axis
         y_col = st.sidebar.selectbox("Select Y-axis", numeric_cols)
 
-         #For Scatter plot 
-        st.sidebar.subheader("Choose this For Scatter plot")
 
         st.subheader("📊 Visualization")
 
@@ -84,7 +82,8 @@ if file:
         #Scatter plot
         
         elif chart_type == "Scatter Plot":
-
+        #For Scatter plot 
+         st.sidebar.subheader("Choose this For Scatter plot")
          x_numeric = st.sidebar.selectbox(
         "Select X-axis (Numeric)",
          numeric_cols
