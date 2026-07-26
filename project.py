@@ -17,3 +17,8 @@ st.dataframe(df)
 
 #Detect columns
 numeric_cols=df.select_dtypes(include='number').columns.tolist()
+
+#Sidebar controls
+st.sidebar("🎮 Controls")
+
+#
