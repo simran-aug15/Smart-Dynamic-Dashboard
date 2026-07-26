@@ -115,9 +115,11 @@ if file:
          categorical_cols = df.select_dtypes(include="object").columns.tolist()
          if len(categorical_cols)>0:
            x_cat = st.sidebar.selectbox("Select Category",categorical_cols )
+           y_num = st.sidebar.selectbox("Select Numerical Column",numeric_cols)
+           plot_df = df[[x_cat, y_num]].dropna()
            fig,ax=plt.subplots(figsize=(7,5))
-           sns.violinplot(data=df,x=x_cat,y=y_col,ax=ax)
-           ax.set_title(f"Violin Plot of {y_col}")
+           sns.violinplot(data=df,x=x_cat,y=y_num,inner="box",ax=ax)
+           ax.set_title( f"{y_num} Distribution by {x_cat}")
            plt.xticks(rotation=90)
            st.pyplot(fig)
 
