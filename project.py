@@ -58,3 +58,7 @@ if numeric_cols:
     #Statistics
     st.sunheader("📈 Statistics")    
     st.write(df[y_col].describe())
+
+
+else:
+    st.warning("No numeric columns found in data ")
