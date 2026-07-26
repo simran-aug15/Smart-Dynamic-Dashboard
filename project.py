@@ -21,4 +21,7 @@ numeric_cols=df.select_dtypes(include='number').columns.tolist()
 #Sidebar controls
 st.sidebar("🎮 Controls")
 
-#
+chart_type=st.sidebar.selectbox("Select Chart Type",["Bar Chart","Line Chart","Pie Chart"])
+
+#Select columns
+x_col=st.sidebar.selectbox("Select X-axis",df.columns)
