@@ -13,4 +13,4 @@ if file:
 
 #Data preview
 st.subheader("📁Data Preview")  
-  
+st.dataframe(df)  
