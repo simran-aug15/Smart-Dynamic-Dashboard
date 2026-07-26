@@ -71,7 +71,7 @@ if file:
               
         #KDE plot
         elif chart_type=="KDE Plot":
-            fig,ax=plt.subplots(figsize=(3,3))
+            fig,ax=plt.subplots(figsize=(7,5))
             sns.kdeplot(data=df[y_col],)
             sns.kdeplot(df[y_col], fill=True,ax=ax)
             ax.set_title(f"KDE Plot of {y_col}")
