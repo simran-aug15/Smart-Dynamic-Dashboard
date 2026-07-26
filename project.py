@@ -54,3 +54,7 @@ if numeric_cols:
             pctdistance=0.8
 
         )       
+
+    #Statistics
+    st.sunheader("📈 Statistics")    
+    st.write(df[y_col].describe())
