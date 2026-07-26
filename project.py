@@ -78,8 +78,9 @@ if file:
             st.pyplot(fig)
 
         #Scatter plot
+        
         elif chart_type == "Scatter Plot":
-
+         st.subheader("Choose this For Scatter plot")
          x_numeric = st.sidebar.selectbox(
         "Select X-axis (Numeric)",
          numeric_cols
