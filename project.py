@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Page setup
 st.set_page_config(layout="wide")
@@ -24,7 +25,7 @@ if file:
 
     chart_type = st.sidebar.selectbox(
         "Select Chart Type",
-        ["Bar Chart", "Line Chart", "Pie Chart"]
+        ["Bar Chart", "Line Chart", "Pie Chart", "Histogram","KDE Plot","Scatter Plot","Box Plot","Pair Plot"]
     )
 
     # Select X-axis
@@ -60,6 +61,9 @@ if file:
 
             ax.set_title(f"{y_col} by {x_col}")
             st.pyplot(fig)
+
+        #Histogram
+        #     
 
         # Statistics
         st.subheader("📈 Statistics")
