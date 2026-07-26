@@ -4,3 +4,4 @@ import matplotlib.pyplot as plt
 
 #Page setup
 st.set_page_config(layout="wide")
+set.title("Smart Dashboard Data Analytics")
