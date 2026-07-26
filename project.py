@@ -112,6 +112,7 @@ if file:
 
         #Violin Plot
         elif chart_type=="Violin Plot":
+         st.sidebar.subheader("Select these for violin plot👇")
          categorical_cols = df.select_dtypes(include="object").columns.tolist()
         #Remove columns having too many unique values
         useful_categories = []
