@@ -14,3 +14,6 @@ if file:
 #Data preview
 st.subheader("📁Data Preview")  
 st.dataframe(df)  
+
+#Detect columns
+numeric_cols=df.select_dtypes(include='number').columns.tolist()
