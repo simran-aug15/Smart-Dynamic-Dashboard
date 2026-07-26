@@ -26,15 +26,15 @@ if file:
     #Select columns
     x_col=st.sidebar.selectbox("Select X-axis",df.columns)
 
-if numeric_cols:
-    y_col=st.sidebar.selectbox("Select Y-axis",numeric_cols)
+    if numeric_cols:
+      y_col=st.sidebar.selectbox("Select Y-axis",numeric_cols)
 
-    st.subheader(" 📊 Visualization")   
+      st.subheader(" 📊 Visualization")   
 
 
     # Bar Chart
     if chart_type=="Bar Chart":
-        st.bar_chart(df[[x_col,y_col]].set_index(x_col))  #As in dataframe we automatically get the index values of the data and take it as the x-axis but we donot need it as x-axis so we make index as x selected value by user 
+       st.bar_chart(df[[x_col,y_col]].set_index(x_col))  #As in dataframe we automatically get the index values of the data and take it as the x-axis but we donot need it as x-axis so we make index as x selected value by user 
 
 
     #Line Chart
