@@ -114,7 +114,7 @@ if file:
         elif chart_type=="Violin Plot":
          categorical_cols = df.select_dtypes(include="object").columns.tolist()
         #Remove columns having too many unique values
-         useful_categories = []
+        useful_categories = []
         for col in categorical_cols:
           if df[col].nunique() < len(df):
             useful_categories.append(col)
