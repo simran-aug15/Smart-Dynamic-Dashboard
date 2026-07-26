@@ -77,7 +77,28 @@ if file:
             ax.set_title(f"KDE Plot of {y_col}")
             st.pyplot(fig)
 
+        #Scatter plot
+        elif chart_type == "Scatter Plot":
 
+         x_numeric = st.sidebar.selectbox(
+        "Select X-axis (Numeric)",
+        numeric_cols
+        )
+
+         y_numeric = st.sidebar.selectbox(
+        "Select Y-axis (Numeric)",
+         numeric_cols,
+         index=1 if len(numeric_cols) > 1 else 0   #"If there are two or more numeric columns, select the second one by default. Otherwise, select the first one."
+        )
+
+        fig, ax = plt.subplots(figsize=(7,5))
+        sns.scatterplot(
+        data=df,
+        x=x_numeric,
+        y=y_numeric,
+        ax=ax
+       )
+        st.pyplot(fig)
 
 
 
