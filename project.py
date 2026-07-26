@@ -25,3 +25,6 @@ chart_type=st.sidebar.selectbox("Select Chart Type",["Bar Chart","Line Chart","P
 
 #Select columns
 x_col=st.sidebar.selectbox("Select X-axis",df.columns)
+
+if numeric_cols:
+    y_col=st.sidebar.selectbox("Select Y-axis",numeric_cols)
