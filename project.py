@@ -119,12 +119,12 @@ if file:
          st.sidebar.subheader("Select these for violin plot👇")
          categorical_cols = df.select_dtypes(include="object").columns.tolist()
         #Remove columns having too many unique values
-        useful_categories = []
-        for col in categorical_cols:
+         useful_categories = []
+         for col in categorical_cols:
           if df[col].nunique() < len(df):
             useful_categories.append(col)
         
-        if useful_categories:
+         if useful_categories:
            x_cat = st.sidebar.selectbox("Select Category Column",useful_categories)
            y_num = st.sidebar.selectbox("Select Numerical Column",numeric_cols)
            plot_df = df[[x_cat, y_num]].dropna()
