@@ -14,7 +14,7 @@ if file:
     df = pd.read_csv(file)
 
     # Data preview
-    st.subheader("📁 Data Preview")
+    st.subheader("⚙️ Data Preview")
     st.dataframe(df)
 
     #Data overview
@@ -143,6 +143,9 @@ if file:
         # Statistics
         st.subheader("📈 Statistics")
         st.write(df[y_col].describe())
+
+        #Download file
+        st.subheader("Download")
 
     else:
         st.warning("No numeric columns found in the uploaded data.")
