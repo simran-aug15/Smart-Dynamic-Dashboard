@@ -18,8 +18,11 @@ if file:
     st.dataframe(df)
 
     #Data overview
+    st.subheader("Data Overview ")
     col1,col2,col3=st.columns(3)
-    col1.metric=
+    col1.metric=st.write("The number of rows in data set are: ",pd.shape[0])
+    col2.metric=st.write("The number of columns in data set are: ",pd.shape[1])
+    col1.metric=st.write("The number of missing values in data set are: ",df.isnull.sum())
 
     # Detect numeric columns
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
