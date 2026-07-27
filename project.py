@@ -145,7 +145,9 @@ if file:
         st.write(df[y_col].describe())
 
         #Download file
-        st.subheader("Download")
+        st.subheader("Download Dataset")
+        csv = df.to_csv(index=False)
+        st.download_button("Download Dataset",csv,"dataset.csv","text/csv")
 
     else:
         st.warning("No numeric columns found in the uploaded data.")
