@@ -22,7 +22,7 @@ if file:
     col1,col2,col3=st.columns(3)
     col1.metric=st.write("The number of rows in data set are: ",df.shape[0])
     col2.metric=st.write("The number of columns in data set are: ",df.shape[1])
-    col1.metric=st.write("The number of missing values in data set are: ",df.isnull.sum())
+    col1.metric=st.write("The number of missing values in data set are: ",df.isnull().sum())
 
     # Detect numeric columns
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
