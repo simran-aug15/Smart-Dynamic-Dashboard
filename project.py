@@ -17,6 +17,9 @@ if file:
     st.subheader("📁 Data Preview")
     st.dataframe(df)
 
+    #Data overview
+    col1,col2,col3=st.columns(3)
+    col1.metric=
 
     # Detect numeric columns
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
